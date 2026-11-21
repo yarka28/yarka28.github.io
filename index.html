@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="uk" data-lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yarka Prod — Freya: Air Defence</title>
+<meta name="description" content="Yarka Prod makes mobile games. Freya: Air Defence is an air-defence strategy game for Android: place your systems, read the sky and hold the city until morning.">
+<meta name="theme-color" content="#0b1016">
+<link rel="icon" href="img/icon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="img/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yarka Prod">
+<meta property="og:title" content="Freya: Air Defence">
+<meta property="og:description" content="An air-defence strategy game for Android. Hold the city until morning.">
+<meta property="og:image" content="https://yarka28.github.io/img/og.jpg">
+<meta property="og:url" content="https://yarka28.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/FiraSansCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site.css">
+<script>
+(function () {
+  var l = "";
+  try { l = localStorage.getItem("lang") || ""; } catch (e) {}
+  if (l !== "uk" && l !== "en") {
+    var n = (navigator.language || "").toLowerCase();
+    l = (n.indexOf("uk") === 0 || n.indexOf("ru") === 0) ? "uk" : "en";
+  }
+  document.documentElement.lang = l;
+  document.documentElement.setAttribute("data-lang", l);
+})();
+</script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./">Yarka Prod</a>
+  <div class="langs" role="group" aria-label="Мова / Language">
+    <button type="button" data-set="uk" aria-label="Українська">UA</button>
+    <button type="button" data-set="en" aria-label="English">EN</button>
+  </div>
+</header>
+
+<section class="hero" aria-label="Freya: Air Defence">
+  <picture>
+    <source media="(max-width: 760px)" srcset="img/hero-960.jpg">
+    <img class="hero-img" src="img/hero.jpg" width="1920" height="938" alt="">
+  </picture>
+  <div class="hero-shade"></div>
+  <div class="hero-copy">
+    <img class="logo" src="img/logo.png" width="1360" height="536" alt="Freya">
+    <p class="tagline"><span lang="uk">Захисти небо над своїм містом</span><span lang="en">Protect the sky over your city</span></p>
+    <p class="soon">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg>
+      <span lang="uk">Незабаром у Google Play</span><span lang="en">Coming soon to Google Play</span>
+    </p>
+  </div>
+</section>
+
+<main>
+  <section class="game">
+    <h1>Freya: Air Defence</h1>
+    <p class="lead">
+      <span lang="uk">Стратегія про протиповітряну оборону для телефона. Став системи ППО, читай небо й тримай місто до ранку.</span>
+      <span lang="en">An air-defence strategy game for your phone. Place your systems, read the sky and hold the city until morning.</span>
+    </p>
+    <ul class="facts">
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V10l5-3v14M8 21V4l7 3v14M15 21v-9l6 2v7M2 21h20"/></svg>
+        <b><span lang="uk">4 краї, 16 міст</span><span lang="en">4 lands, 16 cities</span></b>
+        <span lang="uk">Від річкового міста до морського мису</span><span lang="en">From a river town to a sea cape</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12l6.4-6.4M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/></svg>
+        <b><span lang="uk">12 систем ППО</span><span lang="en">12 air-defence systems</span></b>
+        <span lang="uk">Свій ангар, ранги й фарбування</span><span lang="en">Your own hangar, ranks and paints</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg>
+        <b><span lang="uk">Щоденні випробування</span><span lang="en">Daily challenges</span></b>
+        <span lang="uk">Нове завдання щодня й нескінченна атака</span><span lang="en">A new task every day and an endless attack</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10v-6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+        <b><span lang="uk">Без реклами й покупок</span><span lang="en">No ads, no purchases</span></b>
+        <span lang="uk">Гра нічого не збирає про гравця</span><span lang="en">The game collects nothing about you</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="shots" aria-label="Screenshots">
+    <div class="gallery" lang="uk">
+      <figure><a href="img/uk-01.jpg"><img src="img/uk-01.jpg" width="1280" height="720" loading="lazy" alt="Ракета-перехоплювач зустрічає ціль спалахом над нічним містом"></a><figcaption>Перехоплення над нічним містом</figcaption></figure>
+      <figure><a href="img/uk-02.jpg"><img src="img/uk-02.jpg" width="1280" height="720" loading="lazy" alt="Ангар: зенітна установка в лісовому фарбуванні, її ранг і покращення"></a><figcaption>Ангар: ранги й фарбування</figcaption></figure>
+      <figure><a href="img/uk-03.jpg"><img src="img/uk-03.jpg" width="1280" height="720" loading="lazy" alt="Промінь маяка над нічним морем висвітлює катер для гармат"></a><figcaption>Маяк висвітлює катер</figcaption></figure>
+      <figure><a href="img/uk-04.jpg"><img src="img/uk-04.jpg" width="1280" height="720" loading="lazy" alt="Карта краю: утримані міста із зірками"></a><figcaption>Карта краю</figcaption></figure>
+    </div>
+    <div class="gallery" lang="en">
+      <figure><a href="img/en-01.jpg"><img src="img/en-01.jpg" width="1280" height="720" loading="lazy" alt="An interceptor meets its target in a flash over a night city"></a><figcaption>An interception over a night city</figcaption></figure>
+      <figure><a href="img/en-02.jpg"><img src="img/en-02.jpg" width="1280" height="720" loading="lazy" alt="The hangar: an anti-aircraft gun in forest paint, its rank and upgrades"></a><figcaption>The hangar: ranks and paints</figcaption></figure>
+      <figure><a href="img/en-03.jpg"><img src="img/en-03.jpg" width="1280" height="720" loading="lazy" alt="A lighthouse beam over the night sea picks out a boat for the guns"></a><figcaption>A lighthouse picks out a boat</figcaption></figure>
+      <figure><a href="img/en-04.jpg"><img src="img/en-04.jpg" width="1280" height="720" loading="lazy" alt="A land on the map: the cities held, with their stars"></a><figcaption>A land on the map</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="studio">
+    <h2>Yarka Prod</h2>
+    <p><span lang="uk">Робимо мобільні ігри. Пишіть нам:</span><span lang="en">We make mobile games. Write to us:</span></p>
+    <a class="mail" href="mailto:jaroslav17112007@gmail.com">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg>
+      jaroslav17112007@gmail.com
+    </a>
+  </section>
+</main>
+
+<footer>
+  <p class="note">
+    <span lang="uk">Міста, люди й події в грі вигадані. Freya не пов’язана з жодним виробником, армією чи урядом.</span>
+    <span lang="en">All cities, people and events in the game are fictional. Freya is not affiliated with any manufacturer, armed force or government.</span>
+  </p>
+  <p class="links">
+    <a href="freya/privacy/"><span lang="uk">Політика конфіденційності</span><span lang="en">Privacy policy</span></a>
+    <span class="dot" aria-hidden="true">·</span>
+    <span>© 2026 Yarka Prod</span>
+  </p>
+</footer>
+
+<script>
+(function () {
+  var html = document.documentElement;
+  function mark() {
+    var cur = html.getAttribute("data-lang");
+    var bs = document.querySelectorAll(".langs button");
+    for (var i = 0; i < bs.length; i++) bs[i].setAttribute("aria-pressed", bs[i].getAttribute("data-set") === cur ? "true" : "false");
+  }
+  var bs = document.querySelectorAll(".langs button");
+  for (var i = 0; i < bs.length; i++) {
+    bs[i].addEventListener("click", function () {
+      var l = this.getAttribute("data-set");
+      html.lang = l;
+      html.setAttribute("data-lang", l);
+      try { localStorage.setItem("lang", l); } catch (e) {}
+      mark();
+    });
+  }
+  mark();
+})();
+</script>
+</body>
+</html>

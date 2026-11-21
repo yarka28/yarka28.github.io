@@ -1,0 +1,106 @@
+/* Yarka Prod — the developer's site (D-126). The game's palette and faces: night blue, light ink, warm gold; Fira Sans (OFL). */
+@font-face { font-family: "Fira Sans Condensed"; src: url("fonts/FiraSansCondensed-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fira Sans Condensed"; src: url("fonts/FiraSansCondensed-SemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Fira Sans"; src: url("fonts/FiraSans-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+
+:root {
+  color-scheme: dark;
+  --bg: #0b1016;
+  --panel: #111922;
+  --panel-2: #16202b;
+  --line: rgba(233, 241, 247, 0.09);
+  --ink: #e9f1f7;
+  --dim: #9fb3c2;
+  --faint: #6f8494;
+  --gold: #ffd24a;
+  --gold-ink: #1a1406;
+  --head: "Fira Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --text: "Fira Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --gutter: 16px;
+  --max: 1120px;
+}
+
+/* one language at a time: the page holds both, the switch (or the browser's language) picks */
+html[data-lang="uk"] [lang="en"], html[data-lang="en"] [lang="uk"] { display: none !important; }
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 500 17px/1.6 var(--text); overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--gold); }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+
+/* the bar over the picture */
+.top { position: absolute; z-index: 3; inset: 0 0 auto 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px var(--gutter); }
+.brand { font: 700 18px/1 var(--head); letter-spacing: .18em; text-transform: uppercase; color: var(--ink); text-decoration: none; text-shadow: 0 1px 10px rgba(0, 0, 0, .7); }
+.langs { display: flex; gap: 4px; padding: 4px; background: rgba(11, 16, 22, .6); border: 1px solid var(--line); border-radius: 999px; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.langs button { min-width: 52px; min-height: 40px; padding: 0 12px; border: 0; border-radius: 999px; background: transparent; color: var(--dim); font: 700 15px/1 var(--head); letter-spacing: .08em; cursor: pointer; }
+.langs button[aria-pressed="true"] { background: var(--gold); color: var(--gold-ink); }
+
+/* the title picture: the battery at dusk, the city beyond */
+.hero { position: relative; min-height: 86vh; min-height: 86svh; display: flex; overflow: hidden; isolation: isolate; }
+.hero picture, .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-img { object-fit: cover; object-position: 8% 64%; z-index: -2; }
+.hero-shade { position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(8, 12, 18, .9) 0%, rgba(8, 12, 18, .6) 32%, rgba(8, 12, 18, 0) 55%, rgba(11, 16, 22, 0) 76%, var(--bg) 100%); }
+.hero-copy { margin: 0 auto; padding: 84px var(--gutter) 0; width: min(100%, 460px); text-align: center; }
+.logo { width: min(78vw, 360px); margin: 0 auto; filter: drop-shadow(0 6px 18px rgba(0, 0, 0, .45)); }
+.tagline { margin: 12px 0 0; font: 600 clamp(16px, 4.4vw, 22px)/1.3 var(--head); letter-spacing: .14em; text-transform: uppercase; color: var(--dim); text-shadow: 0 1px 8px rgba(0, 0, 0, .6); }
+.soon { display: inline-flex; align-items: center; gap: 8px; margin: 18px 0 0; padding: 10px 16px 10px 12px; border: 1px solid rgba(255, 210, 74, .45); border-radius: 999px; background: rgba(11, 16, 22, .62); font: 700 15px/1 var(--head); letter-spacing: .06em; text-transform: uppercase; color: var(--gold); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.soon svg { width: 18px; height: 18px; fill: var(--gold); flex: none; }
+
+@media (min-width: 900px) {
+  .hero { min-height: clamp(520px, 50vw, 780px); align-items: center; }
+  .hero-img { object-position: 30% 55%; }
+  .hero-shade { background:
+    linear-gradient(90deg, rgba(8, 12, 18, 0) 36%, rgba(8, 12, 18, .5) 62%, rgba(8, 12, 18, .8) 100%),
+    linear-gradient(180deg, rgba(8, 12, 18, .5) 0%, rgba(8, 12, 18, 0) 20%, rgba(11, 16, 22, 0) 74%, var(--bg) 100%); }
+  .hero-copy { margin: 0 6vw 3vw auto; padding: 0; width: min(38vw, 520px); }
+  .logo { width: 100%; }
+}
+
+/* the game */
+main { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.game { padding: 32px 0 8px; }
+h1, h2 { margin: 0; font-family: var(--head); font-weight: 700; letter-spacing: .02em; line-height: 1.1; }
+h1 { font-size: clamp(30px, 6vw, 46px); }
+h2 { font-size: clamp(24px, 4.4vw, 32px); }
+.lead { margin: 12px 0 0; max-width: 40em; font-size: clamp(17px, 2.2vw, 20px); color: var(--dim); }
+.facts { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 12px; grid-template-columns: 1fr; }
+.facts li { display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; row-gap: 2px; align-items: start; padding: 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; }
+.facts svg { grid-row: span 2; width: 44px; height: 44px; padding: 9px; border-radius: 11px; background: rgba(255, 210, 74, .1); fill: none; stroke: var(--gold); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.facts b { font: 700 19px/1.25 var(--head); letter-spacing: .02em; }
+.facts li > span { color: var(--dim); font-size: 15px; line-height: 1.45; }
+@media (min-width: 640px) { .facts { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) {
+  .facts { grid-template-columns: repeat(4, 1fr); }
+  .facts li { grid-template-columns: 1fr; padding: 20px; }
+  .facts svg { grid-row: auto; margin-bottom: 12px; }
+}
+
+/* the screenshots: a strip to swipe on a phone, a grid on a wide screen */
+.shots { padding: 32px 0 8px; }
+.gallery { display: grid; grid-auto-flow: column; grid-auto-columns: 86%; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter) 8px; scrollbar-width: thin; }
+.gallery figure { margin: 0; scroll-snap-align: center; }
+.gallery a { display: block; border-radius: 12px; }
+.gallery img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); }
+.gallery figcaption { margin-top: 8px; font: 600 15px/1.3 var(--head); letter-spacing: .04em; color: var(--dim); }
+@media (min-width: 760px) {
+  .gallery { grid-auto-flow: row; grid-template-columns: 1fr 1fr; grid-auto-columns: auto; overflow: visible; margin: 0; padding: 0; gap: 22px; }
+}
+
+/* the studio */
+.studio { margin: 36px 0 0; padding: 28px 20px; text-align: center; background: linear-gradient(180deg, var(--panel), var(--panel-2)); border: 1px solid var(--line); border-radius: 18px; }
+.studio p { margin: 8px 0 18px; color: var(--dim); }
+.mail { display: inline-flex; align-items: center; gap: 10px; max-width: 100%; min-height: 48px; padding: 12px 20px; border-radius: 12px; background: var(--gold); color: var(--gold-ink); font: 700 17px/1.2 var(--head); letter-spacing: .02em; text-decoration: none; overflow-wrap: anywhere; }
+.mail svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; flex: none; }
+
+footer { max-width: var(--max); margin: 0 auto; padding: 28px var(--gutter) 36px; color: var(--faint); font-size: 14px; text-align: center; }
+footer .note { margin: 0 auto 10px; max-width: 46em; }
+footer .links { margin: 0; }
+footer a { color: var(--dim); }
+footer .dot { margin: 0 8px; }
+
+/* the page that is not there */
+.lost main { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; color: var(--dim); }
+.lost .logo { width: min(70vw, 320px); margin-bottom: 10px; }
